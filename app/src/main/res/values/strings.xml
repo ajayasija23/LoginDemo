@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Login Demo</string>
+    <string name="continue_with_google">Continue With Google</string>
+    <string name="continue_with_facebook">Continue With Facebook</string>
+    <string name="str_accepting">If you are continue, you are accepting</string>
+    <string name="str_terms">Our Terms and Conditions and Privacy Policy</string>
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="login_to_continue">Login to Continue</string>
+    <string name="log_in">Log In</string>
+    <string name="not_registered">Not Registered?Sign Up</string>
+    <string name="facebook_application_id">678727616057733</string>
+    <string name="fb_login_protocol_scheme">fb678727616057733</string>
+    <string name="created_by">Created By</string>
+    <string name="creator_name">Ajay Asija</string>
+    <string name="name">Name:</string>
+    <string name="email">Email:</string>
+    <string name="dob">DOB:</string>
+    <string name="Mobile">Mobile No:</string>
+    <string name="name_will_appear_here">Name Will Appear Here</string>
+    <string name="log_out">Log Out</string>
+    <string name="phone_will_appear_here">Phone No Will Appear Here</string>
+    <string name="email_will_appear_here">Email Will Appear Here</string>
+    <string name="enter_phone_no">Enter Phone NO</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_name">Enter Name</string>
+
+</resources>

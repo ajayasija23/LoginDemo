@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "807624539218",
+    "firebase_url": "https://login-demo-da4db.firebaseio.com",
+    "project_id": "login-demo-da4db",
+    "storage_bucket": "login-demo-da4db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:807624539218:android:f17db652c9539b47e5f38b",
+        "android_client_info": {
+          "package_name": "com.asijaandroidsolution.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "807624539218-g1aqdqh3fjh6e0t7u396aj59uif2aj6b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5OjxxilEx_ja5XBaukSwi5p-1z28gKoM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "807624539218-g1aqdqh3fjh6e0t7u396aj59uif2aj6b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
