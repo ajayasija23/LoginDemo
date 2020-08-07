@@ -79,14 +79,20 @@ public class LoginActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //setting up view binding
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+
+        //set up toolbar title
         setSupportActionBar(binding.toolBar);
         getSupportActionBar().setTitle("User Profile");
         //setting logout button
         btnLogout = findViewById(R.id.btnLogout);
         btnLogout.setOnClickListener(listener);
+
+        //check current user if user is null show login screen
 
         user = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -102,7 +108,9 @@ public class LoginActivity extends BaseActivity {
             // Create and launch sign-in intent
 
             createAndLaunchIntent();
-        } else {
+        }
+        //setup the user profile
+        else {
             setUi();
         }
 
@@ -156,6 +164,7 @@ public class LoginActivity extends BaseActivity {
                         showLocation();
                         break;
                     case RESULT_CANCELED:
+                        //show the dialog again if user denied to turn on gps
                         enableGps();
                         break;
                 }
@@ -187,16 +196,21 @@ public class LoginActivity extends BaseActivity {
                 binding.editPhone.setText(profile.getPhoneNumber());
             }
         }
+        //sett the location
         setLocation();
     }
 
     private void setLocation() {
+        //location permission
         if (ContextCompat.checkSelfPermission(
                 this, permission[0]) ==
                 PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(
                 this, permission[0]) == PackageManager.PERMISSION_GRANTED) {
+
+            //turn on gps is not on already
             if(!isGpsOn())
                 enableGps();
+            //show location if gps is on
             else
                 showLocation();
         } else {
@@ -282,14 +296,22 @@ public class LoginActivity extends BaseActivity {
                 }
                 else
                 {
+                    //show permission dialog again if user denied permission
                     setLocation();
                 }
                 return;
         }
     }
+    //check whether the gps is on
     private boolean isGpsOn() {
         LocationManager locationManager=(LocationManager) getSystemService(LOCATION_SERVICE);
         return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }
 
